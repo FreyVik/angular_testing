@@ -61,5 +61,16 @@ Se ejecuta antes de destruir un componente
 ## Directivas
 
 1. **\*ngIf:** Pintara la etiqueta si cumple la condicion.
+
 1. **\*ngFor="let \<var> of \<Array>":** ForEach en etiquetas.
+
+1. **\*ngFor="let \<var> of \<Array>; let <indice> = index":** Se puede acceder al valor del indice mediante la variable definida <indice>.
+
 1. **[ngStyle]:** Crear atributo Style.
+
+1. **[style.<property>]:** Introduce a la etiqueta la <property> declarada.
+
+1. **[ngSwitch]="\<var>":** Un switch tipo java.
+   - **\*ngSwitchCase="\<value>"**: case tipo java.
+
+---
