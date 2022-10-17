@@ -30,9 +30,19 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Component
 
+### Creacion de componente
+
 Para generar un componente se puede utilizar el comando `npm run ng g component <componente>`
 
+### Constructor anidado
+
+Ver [Zapatilla](src/app/models/zapatilla.ts) para ver como ahorrar lineas de codigo en el constructor si el nombre de la propiedad y del parametro del constructor son iguales
+
+---
+
 ## Hooks
+
+![Flujo de hooks](images/flujo_hooks.png)
 
 ### OnInit
 
@@ -41,3 +51,15 @@ Se ejecuta al iniciar el componente pero despues del constructor
 ### DoCheck
 
 Se ejecuta despues de modificar cualquier componente
+
+### OnDestroy
+
+Se ejecuta antes de destruir un componente
+
+---
+
+## Directivas
+
+1. **\*ngIf:** Pintara la etiqueta si cumple la condicion.
+1. **\*ngFor="let \<var> of \<Array>":** ForEach en etiquetas.
+1. **[ngStyle]:** Crear atributo Style.
