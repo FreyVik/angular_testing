@@ -25,3 +25,19 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+# Notes
+
+## Component
+
+Para generar un componente se puede utilizar el comando `npm run ng g component <componente>`
+
+## Hooks
+
+### OnInit
+
+Se ejecuta al iniciar el componente pero despues del constructor
+
+### DoCheck
+
+Se ejecuta despues de modificar cualquier componente
