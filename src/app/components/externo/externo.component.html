@@ -1,3 +1,9 @@
+<hr />
+{{ fecha | date: "dd-MM-yyyy" }} <br />
+{{ "PIPES A MINISCULAS" | lowercase }} <br />
+{{ "pipes a mayusculas" | uppercase }}
+<hr />
+
 <input type="text" [(ngModel)]="userId" (keyup.enter)="chargeUser()" />
 
 <div *ngIf="!user">Cargando...</div>

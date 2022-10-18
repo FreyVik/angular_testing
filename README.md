@@ -116,3 +116,9 @@ Para usar el ngModel se necesita importar el `FormsModule` en el [app.module.ts]
    - declarar appRoutingProviders en declarations: []
    - declarar routing en imports: []
 1. Usar la etiqueta \<router-outlet> en [app.html](src/app/app.component.html) para cargar las vistas de los componentes
+
+---
+
+## Pipes
+
+- Buscar en documentacion pipes concretas de angular {{\<var> | \<pipe>}}
