@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { VideojuegoComponent } from './components/videojuego/videojuego.component';
 import { ZapatillaComponent } from './components/zapatilla/zapatilla.component';
 import { CursosComponent } from './components/curso/curso.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { CursosComponent } from './components/curso/curso.component';
     VideojuegoComponent,
     ZapatillaComponent,
     CursosComponent,
-    appRoutingProviders
+    appRoutingProviders,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
