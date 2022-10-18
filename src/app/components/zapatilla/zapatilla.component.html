@@ -1,8 +1,21 @@
-<h2>Componente de zapatillas</h2>
+<h2>{{ titulo }}</h2>
+
+<p>Insertar nueva marca</p>
+<p>
+  <input type="text" [(ngModel)]="miMarca" />
+  <button (click)="alertMarca()">Mostar marca</button>
+  <button (click)="addMarca()">Crear nueva marca</button>
+</p>
+
+<p>
+  <strong>{{ miMarca }}</strong>
+</p>
+
 <p>Compra zapatillas de las mejores marcas</p>
 <ul>
   <li *ngFor="let marca of marcas; let indice = index">
     {{ indice + 1 }}. {{ marca }}
+    <button (click)="deleteMarca(indice)">Eliminar</button>
   </li>
 </ul>
 
@@ -23,6 +36,8 @@
 </ul>
 
 <p>El color de la mayoria de nuestras zapatillas es:</p>
+
+<input type="text" [(ngModel)]="color" />
 
 <ul [ngSwitch]="color">
   <li *ngSwitchCase="'yellow'" [style.background]="color">

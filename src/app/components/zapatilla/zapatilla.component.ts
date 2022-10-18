@@ -10,10 +10,12 @@ export class ZapatillaComponent implements OnInit, DoCheck {
     public zapatillas: Array<Zapatilla>;
     public marcas: string[];
     public color: string;
+    public miMarca: string;
 
     constructor() {
         console.log('Zapatillas construido');
         this.color = 'yellow';
+        this.miMarca = 'Fila';
         this.marcas = new Array();
 
         this.zapatillas = [
@@ -29,14 +31,32 @@ export class ZapatillaComponent implements OnInit, DoCheck {
 
     chargeMarcas() {
         this.zapatillas.forEach((zapatilla, index) => {
-            if (this.marcas.indexOf(zapatilla.marca) == -1)
+            if (!this.existsMarca(zapatilla.marca))
                 this.marcas.push(zapatilla.marca)
         })
 
         console.log(this.marcas);
         
     }
+
+    alertMarca() {
+        alert(this.miMarca);
+    }
+
+    addMarca() {
+        if (!this.existsMarca(this.miMarca))
+            this.marcas.push(this.miMarca);
+    }
+
+    deleteMarca(index: number) {
+        // delete this.marcas[index]
+        this.marcas.splice(index, 1)
+    }
     
+    existsMarca(marca: string): boolean {
+        return this.marcas.indexOf(marca) == -1 ? false : true;
+    }
+
     ngOnInit(): void {
         console.log(this.zapatillas);
     }

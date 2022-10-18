@@ -60,17 +60,23 @@ Se ejecuta antes de destruir un componente
 
 ## Directivas
 
-1. **\*ngIf:** Pintara la etiqueta si cumple la condicion.
+- **\*ngIf:** Pintara la etiqueta si cumple la condicion.
 
-1. **\*ngFor="let \<var> of \<Array>":** ForEach en etiquetas.
+- **\*ngFor="let \<var> of \<Array>":** ForEach en etiquetas.
 
-1. **\*ngFor="let \<var> of \<Array>; let <indice> = index":** Se puede acceder al valor del indice mediante la variable definida <indice>.
+- **\*ngFor="let \<var> of \<Array>; let <indice> = index":** Se puede acceder al valor del indice mediante la variable definida <indice>.
 
-1. **[ngStyle]:** Crear atributo Style.
+- **[ngStyle]:** Crear atributo Style.
 
-1. **[style.<property>]:** Introduce a la etiqueta la <property> declarada.
+- **[style.<property>]:** Introduce a la etiqueta la <property> declarada.
 
-1. **[ngSwitch]="\<var>":** Un switch tipo java.
-   - **\*ngSwitchCase="\<value>"**: case tipo java.
+- **[ngSwitch]="\<var>":** Un switch tipo java.
+  - **\*ngSwitchCase="\<value>"**: case tipo java.
 
 ---
+
+## Two way data-binding
+
+Para usar el ngModel se necesita importar el `FormsModule` en el [app.module.ts](src/app/app.module.ts) y anadirlo en el array de imports
+
+- **[(ngModel)]:** hara referencia a la propiedad del componente
