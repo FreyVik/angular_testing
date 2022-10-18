@@ -80,3 +80,11 @@ Se ejecuta antes de destruir un componente
 Para usar el ngModel se necesita importar el `FormsModule` en el [app.module.ts](src/app/app.module.ts) y anadirlo en el array de imports
 
 - **[(ngModel)]:** hara referencia a la propiedad del componente
+
+---
+
+## Eventos
+
+- **(click)**
+- **(blur)**
+- **(keyup.enter)**

@@ -2,7 +2,8 @@
 
 <p>Insertar nueva marca</p>
 <p>
-  <input type="text" [(ngModel)]="miMarca" />
+  <input type="text" [(ngModel)]="miMarca" (blur)="onBlur()" />
+  <input type="text" [(ngModel)]="miMarca" (keyup.enter)="showWord()" />
   <button (click)="alertMarca()">Mostar marca</button>
   <button (click)="addMarca()">Crear nueva marca</button>
 </p>

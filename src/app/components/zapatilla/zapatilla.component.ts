@@ -57,6 +57,14 @@ export class ZapatillaComponent implements OnInit, DoCheck {
         return this.marcas.indexOf(marca) == -1 ? false : true;
     }
 
+    onBlur() {
+        console.log('Saliste del input');
+    }
+
+    showWord() {
+        alert(this.miMarca)
+    }
+
     ngOnInit(): void {
         console.log(this.zapatillas);
     }
