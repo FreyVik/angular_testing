@@ -95,6 +95,9 @@ Para usar el ngModel se necesita importar el `FormsModule` en el [app.module.ts]
 
 - Generarlo con el decorador @Injectable()
 - Alli donde se vaya a usar el servicio, se debera implementarlo dentro de los provides del componente [ZapatillaComponent](src/app/components/zapatilla/zapatilla.component.ts)
+- Declarar el HttpClientModulo dentro de los _imports_ al **app.module** para poder realizar peticioens ajax.
+  - Importar `{ HttpClientModule } from '@angular/common/http'` en [app.module](src/app/app.module.ts) y declararlo en sus _imports[]_.
+  - Importar `{ HttpClient, HttpHeaders }` y `{ Observable }` en el service para hacer las peticiones Ajax.
 
 ---
 
@@ -111,5 +114,5 @@ Para usar el ngModel se necesita importar el `FormsModule` en el [app.module.ts]
    - export const routing: ModuleWithProviders<any> = RouterModule.forRoot(appRoutes);
 1. Importar el `import { routing, appRoutingProviders } from './app.routing';` en [app.module](src/app/app.module.ts)
    - declarar appRoutingProviders en declarations: []
-   - declarar routing en imorts: []
+   - declarar routing en imports: []
 1. Usar la etiqueta \<router-outlet> en [app.html](src/app/app.component.html) para cargar las vistas de los componentes
