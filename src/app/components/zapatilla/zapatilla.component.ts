@@ -1,30 +1,28 @@
 import { Component, DoCheck, OnInit } from "@angular/core";
 import { Zapatilla } from "src/app/models/zapatilla";
+import { ZapatillaService } from "src/app/services/zapatilla.service";
 
 @Component({
     selector: 'zapatilla',
-    templateUrl: './zapatilla.component.html'
+    templateUrl: './zapatilla.component.html',
+    providers: [ZapatillaService]
 })
 export class ZapatillaComponent implements OnInit, DoCheck {
     public titulo: string = "Componente de zapatilla";
-    public zapatillas: Array<Zapatilla>;
+    public zapatillas: Array<Zapatilla> = [];
     public marcas: string[];
     public color: string;
     public miMarca: string;
 
-    constructor() {
+    constructor(
+        private _zapatillaService: ZapatillaService
+    ) {
         console.log('Zapatillas construido');
         this.color = 'yellow';
         this.miMarca = 'Fila';
         this.marcas = new Array();
 
-        this.zapatillas = [
-            new Zapatilla('Jordan', 80, 'Nike', 'Chicago', true),
-            new Zapatilla('Air Force', 60, 'Nike', 'Blanco', false),
-            new Zapatilla('Yeezys', 180, 'Adidas', 'Zebra', true),
-            new Zapatilla('AirMax 90', 150, 'Nike', 'Terrance', true),
-            new Zapatilla('Spartan', 150, 'Reebok', 'Negro', false)
-        ];
+        this.zapatillas = this._zapatillaService.getZapatillas()
 
         this.chargeMarcas();
     }

@@ -89,6 +89,15 @@ Para usar el ngModel se necesita importar el `FormsModule` en el [app.module.ts]
 - **(blur)**
 - **(keyup.enter)**
 
+---
+
+## Services
+
+- Generarlo con el decorador @Injectable()
+- Alli donde se vaya a usar el servicio, se debera implementarlo dentro de los provides del componente [ZapatillaComponent](src/app/components/zapatilla/zapatilla.component.ts)
+
+---
+
 ## Routing
 
 1. Generar el archivo [app.routing](src/app/app.routing.ts) bajo la carpeta `app/`
