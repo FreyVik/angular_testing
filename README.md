@@ -70,6 +70,8 @@ Se ejecuta antes de destruir un componente
 - **[\<atributo>.\<valor>]="\<boolean>":** introduce un \<atributo> con el \<valor> especificado.
 - **[ngClass]="[\<class1>, \<class2>]":** insertes las clases especificadas
   -- **[ngClass]="{'\<class1>': \<boolean1>, '\<class2>': \<boolean2>}":** Insertara las clases si se cumplen las condiciones.
+- **[routerLink]="['/\<endpoint>']":** Genera link al \<endpoint>
+- **[routerLinkActive]="['\<clase>']":** Inyecta la \<clase> si se esta en el routing
 
 ---
 

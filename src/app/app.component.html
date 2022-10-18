@@ -2,6 +2,20 @@
   <h1>Bienvenido a {{ title }}</h1>
   <h3>{{ description }}</h3>
 
+  <nav>
+    <a [routerLink]="['/home']" [routerLinkActive]="['active']">Home</a>
+    &nbsp;
+    <a [routerLink]="['/zapatillas']" [routerLinkActive]="['active']"
+      >Zapatillas</a
+    >
+    &nbsp;
+    <a [routerLink]="['/cursos']" [routerLinkActive]="['active']">Cursos</a>
+    &nbsp;
+    <a [routerLink]="['/videojuego']" [routerLinkActive]="['active']"
+      >Videojuego</a
+    >
+  </nav>
+
   <!--
   <button (click)="hideVideojuego()">Mostrar/Ocultar videojuegos</button>
   <videojuego *ngIf="showVideojuego"></videojuego>
