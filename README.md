@@ -61,17 +61,15 @@ Se ejecuta antes de destruir un componente
 ## Directivas
 
 - **\*ngIf:** Pintara la etiqueta si cumple la condicion.
-
 - **\*ngFor="let \<var> of \<Array>":** ForEach en etiquetas.
-
-- **\*ngFor="let \<var> of \<Array>; let <indice> = index":** Se puede acceder al valor del indice mediante la variable definida <indice>.
-
+- **\*ngFor="let \<var> of \<Array>; let \<indice> = index":** Se puede acceder al valor del indice mediante la variable definida <indice>.
 - **[ngStyle]:** Crear atributo Style.
-
-- **[style.<property>]:** Introduce a la etiqueta la <property> declarada.
-
+- **[style.<property>]:** Introduce a la etiqueta la \<property> declarada.
 - **[ngSwitch]="\<var>":** Un switch tipo java.
-  - **\*ngSwitchCase="\<value>"**: case tipo java.
+  - **\*ngSwitchCase="\<value>":** case tipo java.
+- **[\<atributo>.\<valor>]="\<boolean>":** introduce un \<atributo> con el \<valor> especificado.
+- **[ngClass]="[\<class1>, \<class2>]":** insertes las clases especificadas
+  -- **[ngClass]="{'\<class1>': \<boolean1>, '\<class2>': \<boolean2>}":** Insertara las clases si se cumplen las condiciones.
 
 ---
 

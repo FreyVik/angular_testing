@@ -26,13 +26,23 @@
     *ngFor="let zapatilla of zapatillas"
     [style.text-decoration]="zapatilla.stock ? 'none' : 'line-through'"
   >
-    {{ zapatilla.nombre }} - <strong>{{ zapatilla.precio }}&euro; </strong>
+    {{ zapatilla.nombre }} -
     <span
-      *ngIf="zapatilla.precio <= 100"
-      [style.background]="zapatilla.precio < 80 ? 'green' : 'transparent'"
-      [style.color]="zapatilla.precio < 80 ? 'white' : 'black'"
-      >EN OFERTA</span
+      [ngClass]="{
+        'fondo-rojo': zapatilla.precio > 100,
+        subrayado: zapatilla.marca == 'Nike'
+      }"
     >
+      <strong [class.precio-alto]="zapatilla.precio >= 80"
+        >{{ zapatilla.precio }}&euro;
+      </strong>
+      <span
+        *ngIf="zapatilla.precio <= 100"
+        [style.background]="zapatilla.precio < 80 ? 'green' : 'transparent'"
+        [style.color]="zapatilla.precio < 80 ? 'white' : 'black'"
+        >EN OFERTA</span
+      >
+    </span>
   </li>
 </ul>
 
