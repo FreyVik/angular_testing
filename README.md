@@ -86,3 +86,19 @@ Para usar el ngModel se necesita importar el `FormsModule` en el [app.module.ts]
 - **(click)**
 - **(blur)**
 - **(keyup.enter)**
+
+## Routing
+
+1. Generar el archivo [app.routing](src/app/app.routing.ts) bajo la carpeta `app/`
+1. Importar en este archivo ModuleWithProviders, Routes y Router.
+1. Importar los componentes.
+1. Generar la variable appRoutes: Routes [].
+   - `{path: '\<ruta>', component: \<componente>}`: Definir las rutas
+   - `{path: '**', component: \<ZapatillaComponent>}`: Definir la ruta 404 la ultima, sino fallara lo demas ya que es tipo el default de un switch
+1. Exportar:
+   - export const appRoutingProviders: any[] = [];
+   - export const routing: ModuleWithProviders<any> = RouterModule.forRoot(appRoutes);
+1. Importar el `import { routing, appRoutingProviders } from './app.routing';` en [app.module](src/app/app.module.ts)
+   - declarar appRoutingProviders en declarations: []
+   - declarar routing en imorts: []
+1. Usar la etiqueta \<router-outlet> en [app.html](src/app/app.component.html) para cargar las vistas de los componentes
