@@ -1,7 +1,8 @@
 <hr />
 {{ fecha | date: "dd-MM-yyyy" }} <br />
 {{ "PIPES A MINISCULAS" | lowercase }} <br />
-{{ "pipes a mayusculas" | uppercase }}
+{{ "pipes a mayusculas" | uppercase }} <br />
+{{ 4 | calculadora: 2 }}
 <hr />
 
 <input type="text" [(ngModel)]="userId" (keyup.enter)="chargeUser()" />

@@ -122,3 +122,5 @@ Para usar el ngModel se necesita importar el `FormsModule` en el [app.module.ts]
 ## Pipes
 
 - Buscar en documentacion pipes concretas de angular {{\<var> | \<pipe>}}
+- Para crear pipe, importar { Pipe, PipeTransform }.
+- Importarlo en los declaration de [app.module](src/app/app.module.ts).

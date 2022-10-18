@@ -11,6 +11,8 @@ import { CursosComponent } from './components/curso/curso.component';
 import { HomeComponent } from './components/home/home.component';
 import { ExternoComponent } from './components/externo/externo.component';
 
+import { CalculadoraPipe } from './pipes/calculadora.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +21,8 @@ import { ExternoComponent } from './components/externo/externo.component';
     CursosComponent,
     appRoutingProviders,
     HomeComponent,
-    ExternoComponent
+    ExternoComponent,
+    CalculadoraPipe
   ],
   imports: [
     BrowserModule,
