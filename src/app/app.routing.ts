@@ -7,6 +7,7 @@ import { CursosComponent } from "./components/curso/curso.component";
 import { VideojuegoComponent } from "./components/videojuego/videojuego.component"; 
 import { HomeComponent } from "./components/home/home.component";
 import { ExternoComponent } from "./components/externo/externo.component";
+import { ContactoComponent } from "./components/contacto/contacto.component";
 
 // Array de rutas
 const appRoutes: Routes = [
@@ -16,6 +17,7 @@ const appRoutes: Routes = [
     {path: 'cursos', component: CursosComponent},
     {path: 'cursos/:nombre', component: CursosComponent},
     {path: 'externo', component: ExternoComponent},
+    {path: 'contacto', component: ContactoComponent},
     {path: '**', component: ZapatillaComponent}
 ];
 
