@@ -1,0 +1,7 @@
+<h1 [ngClass]="{
+    'text-black': !isDarkTheme,
+    'text-white': isDarkTheme
+}">
+Asignatura {{asignatura.nombre}}</h1>
+
+<h2>Dificultad <span [ngClass]="'dificultad-' + asignatura.dificultad">{{asignatura.dificultad}}</span></h2>

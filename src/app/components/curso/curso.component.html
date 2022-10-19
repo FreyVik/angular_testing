@@ -2,4 +2,8 @@
 
 <h2 *ngIf="nombre">Bienvenido {{ nombre }}</h2>
 
+<asignatura *ngFor="let asignatura of asignaturas"
+    [asignatura]="asignatura"
+></asignatura>
+
 <button (click)="redirigir()">Llevame a zapatillas</button>

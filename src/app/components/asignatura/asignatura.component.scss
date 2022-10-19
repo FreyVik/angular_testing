@@ -1,0 +1,27 @@
+.text-black {
+    background: transparent;
+    color: black;
+}
+
+.text-white {
+    background: black;
+    color: white;
+}
+
+.dificultad-alta,
+.dificultad-media,
+.dificultad-baja {
+    color: white;
+}
+
+.dificultad-alta {
+    background: red;
+}
+
+.dificultad-media {
+    background: blue;
+}
+
+.dificultad-baja {
+    background: green;
+}
