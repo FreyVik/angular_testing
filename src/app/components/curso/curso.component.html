@@ -2,8 +2,15 @@
 
 <h2 *ngIf="nombre">Bienvenido {{ nombre }}</h2>
 
+<div id="asignatura-favorita" *ngIf="asignaturaFavorita">
+    <h2>Asignatura favorita</h2>
+
+    {{asignaturaFavorita.nombre}}
+</div>
+
 <asignatura *ngFor="let asignatura of asignaturas"
     [asignatura]="asignatura"
+    (AsignaturaFavorita)="mostrarFavorita($event)"
 ></asignatura>
-
+<hr>
 <button (click)="redirigir()">Llevame a zapatillas</button>

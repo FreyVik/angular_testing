@@ -5,3 +5,7 @@
 Asignatura {{asignatura.nombre}}</h1>
 
 <h2>Dificultad <span [ngClass]="'dificultad-' + asignatura.dificultad">{{asignatura.dificultad}}</span></h2>
+
+<button (click)="seleccionar($event, asignatura)">
+    Seleccionar como asignatura favorita
+</button>

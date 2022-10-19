@@ -11,6 +11,7 @@ import { AppService } from 'src/app/services/app.service';
 export class CursosComponent implements OnInit {
   public nombre: string = "";
   public asignaturas: Array<Asignatura> = [];
+  public asignaturaFavorita!: Asignatura;
   public _getEnumIndex: Function;
 
   constructor(
@@ -50,4 +51,7 @@ export class CursosComponent implements OnInit {
     this.asignaturas.sort((a: Asignatura, b: Asignatura) => (this._getEnumIndex(Dificultad, a.dificultad) < this._getEnumIndex(Dificultad, b.dificultad) ? -1 : 1) )
   }
 
+  mostrarFavorita(event: any) {
+    this.asignaturaFavorita = event.asignatura;
+  }
 }
